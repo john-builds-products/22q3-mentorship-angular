@@ -1,0 +1,47 @@
+.job-form {
+    position:fixed;
+    left:50px;
+    top:50px;
+    width: 90.8vw;
+    height: 90.8vh;
+    background-color: #dadada;
+    border: 5px solid black;
+    margin: auto 0;
+    padding: 25px;
+
+}
+
+.c-job-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.c-job-input-fields {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 0px;
+}
+
+.c-job-input-fields {
+    width: 300px;
+    &-b {
+        width: 250px;
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+    }
+   div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+  
+}
+
+.c-exit {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}

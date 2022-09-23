@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card__title">{{data.jobTitle}}</div>
+    <div>
+        <div class="card__lineItem">Job ID: <span>{{data.jobId}}</span></div>
+        <div class="card__lineItem">City: <span>{{data.jobCity}}</span></div>
+        <div class="card__lineItem">State: <span>{{data.state}}</span></div>
+    </div>
+    <div>
+        <div class="card__lineItem">Industry: <span>{{data.industry}}</span></div>
+        <div class="card__lineItem">Sector: <span>{{data.sector}}</span></div>
+    </div>
+    <div class="card__benefits">
+        <div class="card__lineItem" *ngFor="let benefitBranch of data.benefits  | keyvalue">
+            {{benefitBranch.key}} Plan #: <span>{{benefitBranch.value}}</span> 
+        </div>
+    </div>
+</div>
+

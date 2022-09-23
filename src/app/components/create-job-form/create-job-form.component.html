@@ -1,0 +1,73 @@
+
+<div class="job-form" [formGroup]="newJobListing">
+
+    <p>
+    Your form status is : {{ newJobListing.status }}
+    </p>
+
+
+    <div class="c-job-row">
+        <div>
+            <h2>Add a new job</h2> 
+            <div class="c-job-input-fields">
+                <div> 
+                    <label for="jobTitle">Job Title: </label>
+                    <input id="jobTitle" type="text" formControlName="jobTitle">
+                </div>
+                <div>
+                    <label for="jobDescription">Job Description: </label>
+                    <input id="jobDescription" type="textarea" formControlName="jobDescription">
+                </div>
+                
+                <div>
+                    <label for="hiringCompany">Hiring Company: </label>
+                    <input id="hiringCompany" type="text" formControlName="hiringCompany">
+                </div>
+                
+                <div>
+                    <label for="hiringManager">Hiring Manager: </label>
+                    <input id="hiringManager" type="text" formControlName="hiringManager">
+                </div>
+                
+                <div>
+                    <label for="contactPhone">Contact Phone #: </label>
+                    <input id="contactPhone" type="text" formControlName="contactPhone">
+                </div>
+
+                <div>
+                    <label for="estimatedSalary">Est. Salary: </label>
+                    <input id="estimatedSalary" type="text" formControlName="estimatedSalary">
+                </div>
+            </div>
+        </div>
+        <div formGroupName="address">
+            <h2>Job location</h2>
+            <div class="c-job-input-fields-b">
+                <div>
+                <label for="street">Street: </label>
+                <input id="street" type="text" formControlName="street">
+                </div>
+
+                <div>
+                <label for="city">City: </label>
+                <input id="city" type="text" formControlName="city">
+            </div>
+            <div>
+                <label for="state">State: </label>
+                <input id="state" type="text" formControlName="state">
+            </div>
+            <div>
+                <label for="zip">Zip Code: </label>
+                <input id="zip" type="text" formControlName="zip">
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <button [disabled]="newJobListing.invalid || newJobListing.pristine" type="submit">Submit</button>
+
+    <div class="c-exit" mat-dialog-actions>
+        <button (click)="closeDialog()">X</button>
+    </div>   
+
+</div>
